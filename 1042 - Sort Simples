@@ -1,0 +1,34 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var prompt= function(texto) { return lines.shift(); };
+    
+    var frase= prompt("frase");
+    var[A,B,C]= frase.split(" ");
+
+
+    A=parseInt(A);
+    B=parseInt(B);
+    C=parseInt(C);
+
+    var m1=Math.max(A,B,C);
+    if(m1==A){
+      var m2=Math.max(B,C);
+      var m3=Math.min(B,C);
+    }
+    if(m1==B){
+      var m2=Math.max(A,C);
+      var m3=Math.min(A,C);
+    }
+    if(m1==C){
+      var m2=Math.max(B,A);
+      var m3=Math.min(B,A);
+    }
+
+    console.log(m3);
+    console.log(m2);
+    console.log(m1);
+    console.log("");
+    console.log(A);
+    console.log(B);
+    console.log(C);
