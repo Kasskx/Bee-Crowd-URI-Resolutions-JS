@@ -1,0 +1,17 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+var prompt= function(texto) { return lines.shift(); };
+   
+    var frase= prompt("frase");
+    var [T1,T2,T3,T4]= frase.split(" ");
+    
+    T1=parseInt(T1);
+    T2=parseInt(T2);
+    T3=parseInt(T3);
+    T4= parseInt(T4);
+
+    var somatorio= (T1 + T2 + T3 + T4) - 3;
+
+    if(2<=[T1,T2,T3,T4]<=6){
+        console.log(somatorio);
+    }
