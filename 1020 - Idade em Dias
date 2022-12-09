@@ -1,0 +1,21 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+let Dias = parseInt(input);
+let Anos, Meses;
+
+/* Dados */
+
+Anos = parseInt(Dias / 365); /* Anos */
+Dias = Dias % 365;
+Meses = parseInt(Dias / 30); /* Meses */
+Dias = Dias % 30;
+
+
+let resultado = `${Anos} ano(s)
+${Meses} mes(es)
+${Dias} dia(s)`;
+
+/* Final */
+
+console.log(resultado);
