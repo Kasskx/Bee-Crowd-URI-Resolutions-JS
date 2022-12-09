@@ -1,0 +1,21 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var line = lines.shift().split(" ");
+var aInicio = parseInt(line[0]);
+var bInicio = parseInt(line[1]);
+var cInicio = parseInt(line[2]);
+var dInicio = parseInt(line[3]);
+var totalM = (dInicio-bInicio);
+var totalH = (cInicio-aInicio);
+if (totalM < 0) 
+{
+    totalM += 60;
+    totalH--;
+}
+if (totalH < 0) 
+{
+    totalH+=24;
+}
+if (aInicio == cInicio && bInicio == dInicio) console.log('O JOGO DUROU 24 HORA(S) E 0 MINUTO(S)');
+else console.log('O JOGO DUROU '+ totalH + ' HORA(S) E ' + totalM + ' MINUTO(S)');
