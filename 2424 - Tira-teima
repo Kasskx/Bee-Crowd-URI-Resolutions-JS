@@ -1,0 +1,9 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+var prompt = function(texto){return lines.shift()};
+var [k, i] = (prompt(' ').split(' ').map(Number))
+if(k<0||k>432||i<-468||i>468||i<0){
+    console.log("fora")
+}else{
+    console.log("dentro")
+}
