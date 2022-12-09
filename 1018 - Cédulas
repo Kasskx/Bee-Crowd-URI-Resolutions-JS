@@ -1,0 +1,31 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+var prompt= function(texto) { return lines.shift(); };
+
+var qtdEmReais = parseInt(prompt("Escreva abaixo a quantidade de reais que se deseja calcular."));
+
+console.log(qtdEmReais);
+
+var notas = parseInt(qtdEmReais / 100);
+console.log(`${notas} nota(s) de R$ ${100},00`);
+qtdEmReais = qtdEmReais % 100;
+
+var notas = parseInt(qtdEmReais / 50);
+console.log(`${notas} nota(s) de R$ ${50},00`);
+qtdEmReais = qtdEmReais % 50;
+
+var notas = parseInt(qtdEmReais / 20);
+console.log(`${notas} nota(s) de R$ ${20},00`);
+qtdEmReais = qtdEmReais % 20;
+
+var notas = parseInt(qtdEmReais / 10);
+console.log(`${notas} nota(s) de R$ ${10},00`);
+qtdEmReais = qtdEmReais % 10;
+
+var notas = parseInt(qtdEmReais / 5);
+console.log(`${notas} nota(s) de R$ ${5},00`);
+qtdEmReais = qtdEmReais % 5;
+
+var notas = parseInt(qtdEmReais / 2);
+console.log(`${notas} nota(s) de R$ ${2},00`);
+qtdEmReais = qtdEmReais % 2;
