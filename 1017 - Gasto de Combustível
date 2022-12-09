@@ -1,0 +1,10 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+var prompt= function(texto) { return lines.shift(); };
+
+var tempoViagemHoras = Number(prompt("Escreva abaixo o tempo estimado da viagem em horas."));
+var velocidadeMedia = Number(prompt("Escreva abaixo a velocidade média em km/h."));
+
+var qtdLitros = tempoViagemHoras * velocidadeMedia / 12;
+
+console.log(qtdLitros.toFixed(3));
