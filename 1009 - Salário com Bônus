@@ -1,0 +1,16 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+var prompt= function(texto) { return lines.shift(); };
+
+var nmUsuario = Number(prompt("Número do Usuário abaixo."));
+var salarioFixo = Number(prompt("Escreva abaixo o seu Salário Fixo."));
+salarioFixo.toFixed(2);
+
+var totalVendas = Number(prompt("")); 
+totalVendas.toFixed(2);
+
+var comissao = totalVendas * 0.15;
+
+var SALARIO = salarioFixo + comissao;
+
+console.log("TOTAL = R$ " + SALARIO.toFixed(2));
