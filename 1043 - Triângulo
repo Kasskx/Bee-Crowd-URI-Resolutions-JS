@@ -1,0 +1,16 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+
+var prompt= function(texto) { return lines.shift(); };
+    
+    var valor= prompt("valor");
+    var[A,B,C]= valor.split(" ").map(Number);
+
+    var triangulo = A + B + C;
+    var areaTrapezio = ((A + B) * C) / 2;
+
+    var resultadoTotal= (Math.abs(B-C)<A && A<(B+C)) ? 
+                         "Perimetro = "+triangulo.toFixed(1) :
+                         "Area = " + areaTrapezio.toFixed(1);
+                         
+    console.log(resultadoTotal);   
