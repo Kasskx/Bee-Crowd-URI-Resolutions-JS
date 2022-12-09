@@ -1,0 +1,12 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
+var prompt= function(texto) { return lines.shift(); };
+
+var X = Number(prompt("Escreva aqui a distância percorrida."));
+
+var Y = Number(prompt("Escreva o total de combústivel gasto."));
+Y.toFixed(1);
+
+var consumoMedio = X / Y;
+
+console.log(consumoMedio.toFixed(3) + " km/l");
